@@ -1,0 +1,76 @@
+WHAT I HAVE LEARNED IN PYTHON LAB DATE(17/11/2026)
+
+1) what is a fork ?
+
+this topic was brought up in class and given in one example which goes as 
+
+import os
+
+a = "hello world"
+os.fork()
+os.fork()
+os.fork()
+print(a)
+
+
+here the hello world would print around 8 times and the reason behind it is 2**3 or (2**n formula) time fork but the main reason is 
+
+• 1st fork(): P1 splits into two. Now you have 2 processes (P1 and C1). Both move on to the second fork().
+• 2nd fork(): Both P1 and C1 split into two. Now you have 4 processes (P1, C1, plus two new ones: C2 and C3). All 4 move on to the third fork().
+• 3rd fork(): All 4 processes split into two again. Now you have 8 processes running at the exact same time.
+
+
+2) what is the difference between fork and clone in GitHub ?
+in simple world the fork create a duliplicate in the GitHub cloud but clone is downloading the code directly even thou they serve the same purpose to edit and manipulate and edit without disturbing the main code 
+
+3) simple experiment i wanna do is to fork something from my GitHub also , maybe this readme file that u can will see the answer to in the fork section?
+
+
+4) working on simple code snippet discussed in class and actually understanding what kind of code error it is giving me?
+
+num=[10,20]
+num.append[30]
+num.extend(30)
+number=int(input("enter the number"))
+if(number & 1 ) == 0:
+    print(f"{number} is even")
+else:
+    print({f"{number}is odd"})
+
+ERROR:
+not functional error(which was guessed) but type error( cuz append[30]) 
+Square brackets [] are used for indexing or slicing (like getting an item from a list), while parentheses () are used to call a function or method.
+
+The .extend() method expects an iterable (like another list, tuple, or string) so it can loop through and add each element individually. Passing a single integer 30 causes TypeError: 'int' object is not iterable.
+
+5) learing about git and how to upload directly form my vs code ?
+
+git init
+git add . (adding all here)
+git commit -m "initial commit"
+git branch -M main
+git push origin main
+
+(
+echo "# python_progamming_lab" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/sanmukhamca26/python_progamming_lab.git
+git push -u origin main
+)
+
+got error cuz i need to login my accound and then do it
+
+6) Started introuding python book read till page 26 
+got the youtube.py code from the book but it is old and youtube closed api way back and now it doesn't have that so check that as well 
+
+7) what is hdf5?
+HDF5 is a high-performance file format designed to store massive amounts of complex data in a single file—essentially acting like a complete file system inside one file.
+
+* **Groups:** Act like folders to organize your data.
+* **Datasets:** Act like files that hold the actual numbers, tables, or images.
+* **Attributes:** Act like sticky notes that save metadata (like units or dates) right next to the data.
+
+It is widely used in science and AI because it lets you compress huge datasets and read tiny pieces of a massive file directly from your hard drive without overloading your computer's RAM.
